@@ -1,0 +1,16 @@
+.pagination-container{
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    margin-top: 10px;
+    margin-right: 67px;
+}
+
+.pagination-container button{
+    border:0;
+    background-color: transparent;
+}
+
+.pagination-numero{
+    padding: 0px 8px;
+}

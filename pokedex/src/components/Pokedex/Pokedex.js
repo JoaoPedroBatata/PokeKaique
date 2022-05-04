@@ -1,15 +1,28 @@
 import React from "react";
 import Pokemon from "../Pokemon/Pokemon";
 import './Pokedex.css';
+import Pagination from "../Pagination/Pagination";
 
 const Pokedex = (props) => {
-  const { pokemons, loading } = props;
+  const { pokemons, loading, page, setPage, totalPages } = props;
+  const onLeftClickHandler = () => {
+    if(page > 0) {
+        setPage(page-1)
+    }
+  }
+  const onRightClickHandler = () => {
+      if(page+1 !== totalPages){
+          setPage(page+1)
+      }
+  }
   return (
     <div>
-      <div className="pokedex-header">
-        <h1>Pokedex</h1>
-        <div>Paginacao</div>
-      </div>
+        <Pagination
+            page={page+1}
+            totalPages={totalPages}
+            onLeftClick={onLeftClickHandler}
+            onRightClick={onRightClickHandler}
+        />
       {loading ? (
         <div>Carregando...</div>
       ) : (
@@ -21,6 +34,12 @@ const Pokedex = (props) => {
             })}
         </div>
       )}
+      <Pagination
+            page={page+1}
+            totalPages={totalPages}
+            onLeftClick={onLeftClickHandler}
+            onRightClick={onRightClickHandler}
+        />
     </div>
   );
 };
