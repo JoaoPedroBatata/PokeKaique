@@ -8,10 +8,10 @@
     width: 30px;
 }
 .card-pokemon-container{
-    background-color: yellow;
+    background: linear-gradient(49deg, #ffc40c,#dfff00);
     width: 175px;
-    height: 200px;
-    border: 1px solid black;
+    height: 240px;
+    border: 3px solid black;
     margin: 10%;
 }
 
@@ -26,13 +26,23 @@
 .name{
     text-align: center;
     font-size: 16px;
-    font-weight: lighter;
-    padding: 0px;
+    font-weight:bolder;
+    padding: 3px;
     margin-left: 25px;
-    
+    text-transform: capitalize;
 }
 .type{
     display: flex;
     flex-direction: row;
     align-items: baseline;
+}
+.pokemon-stats{
+    display:flex;
+    font-size: 11px;
+    text-align: center;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+.pokemon-stats-text{
+    border: 1px solid black;
 }

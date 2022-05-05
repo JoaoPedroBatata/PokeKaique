@@ -23,8 +23,8 @@ const Pokemon = (props) => {
                 <div class="pokemon-stats">
                     {pokemon.stats.map((stat,index) =>{
                         return(
-                            <div key = {index}>
-                                {stat.stat.name}:{stat.base_stat}
+                            <div class="pokemon-stats-text" key = {index}>
+                                {stat.stat.name}:   {stat.base_stat}
                                 </div>
                         )
                     })}
