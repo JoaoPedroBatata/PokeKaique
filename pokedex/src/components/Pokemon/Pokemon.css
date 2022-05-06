@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    
 }
 
 .img-pokemon-type{
@@ -10,9 +11,10 @@
 .card-pokemon-container{
     background: linear-gradient(49deg, #ffc40c,#dfff00);
     width: 175px;
-    height: 240px;
+    height: 238px;
     border: 3px solid black;
     margin: 10%;
+    border-radius: 10px;
 }
 
 .background{
