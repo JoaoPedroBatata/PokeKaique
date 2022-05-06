@@ -1,3 +1,4 @@
+
 .header{
   display: flex;
   flex-direction: row;
@@ -7,7 +8,8 @@
 .fundo{
   background-image: url(https://images7.alphacoders.com/662/thumb-1920-662102.png);
   background-repeat: no-repeat;
-  display:  block;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+   height: 185vh;
 }

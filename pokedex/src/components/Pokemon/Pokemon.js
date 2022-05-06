@@ -7,23 +7,31 @@ const Pokemon = (props) => {
         <div className="card-pokemon-container">
             <div className="card-pokemon">
                 <div className="background">
-                    <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-                </div>
-                <div className="type">
-                    {pokemon.types.map((type,index) =>{
-                            return(
-                                <img className="img-pokemon-type" src={filtrarImgPeloTipo(type)}/>
-                            ) 
+                   <div className="header-card">
+                        <div className="id">
+                        {pokemon.id}
+                        </div>
+                        <div className="type">
+                        
+                        {pokemon.types.map((pokemonType) => {
+                            let typeImg = filtrarImgPeloTipo(pokemonType);
+                            return (
+                                <img className="img-pokemon-type" src={typeImg.img}/>
+                            );
                             
-                        })}
-                    <div className="name">
+                        })}                    
+                        </div>
+                    </div>
+                        <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+                </div>
+                
+                <div className="name">
                         {pokemon.name} 
                     </div>
-                </div>
-                <div class="pokemon-stats">
+                <div className="pokemon-stats">
                     {pokemon.stats.map((stat,index) =>{
                         return(
-                            <div class="pokemon-stats-text" key = {index}>
+                            <div className="pokemon-stats-text" key = {index}>
                                 {stat.stat.name}:   {stat.base_stat}
                                 </div>
                         )
@@ -57,7 +65,7 @@ function filtrarImgPeloTipo(pokemonType) {
             img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Pok%C3%A9mon_Bug_Type_Icon.svg/120px-Pok%C3%A9mon_Bug_Type_Icon.svg.png"
         },
         {
-            name:"eletric",
+            name:"electric",
             img:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg/120px-Pok%C3%A9mon_Electric_Type_Icon.svg.png"
         },
         {
@@ -103,12 +111,16 @@ function filtrarImgPeloTipo(pokemonType) {
         {
             name:"steel",
             img:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Pok%C3%A9mon_Steel_Type_Icon.svg/120px-Pok%C3%A9mon_Steel_Type_Icon.svg.png"
+        },
+        {
+            name:"dragon",
+            img:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Pok%C3%A9mon_Dragon_Type_Icon.svg/120px-Pok%C3%A9mon_Dragon_Type_Icon.svg.png"
         }
     ];
 
-    return typesImg.filter((typeImg) => {
+    return typesImg.find((typeImg) => {
         return pokemonType.type.name === typeImg.name;
-    })[0].img;
+    });
 }
 
 
