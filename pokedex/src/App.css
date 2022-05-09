@@ -1,0 +1,15 @@
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fundo{
+  background-image: url(https://images7.alphacoders.com/662/thumb-1920-662102.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+   height: 185vh;
+}
