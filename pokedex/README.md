@@ -1,6 +1,7 @@
 ## Iniciando o app
 Para baixar as dependências do projeto, então com as variáveis de ambiente devidamente atribuídas, use o  comando:
 > npm install
+
 Para iniciar o projeto no localhost:3000:
 > npm start
 ## Pokedex
